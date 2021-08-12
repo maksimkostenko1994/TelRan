@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>05-08-Slider</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div title="next" onclick="getTask(title)" style="position: relative; width: 150px;margin: 15px; border-radius: 5px;overflow: hidden">
+    <div class="btn-task-text">Next Task</div>
+    <button class="btn-task" id="nextTask" value="next"></button>
+    <div class="btn-task-hover"></div>
+</div>
+<button class="btn-task" id="prevTask" value="prev" style="display: none" onclick="getTask(value)">Previous Task
+</button>
+<div>
+    <div id="task-slider">
+        <div id="img">
+            <img src="./img/4.jpg" alt="1" width="800" height="500">
+        </div>
+        <div class="btn-slide-prev" id="prev" onclick="prev()">
+            <h1><</h1>
+        </div>
+        <div id="next" class="btn-slide-next" onclick="next()">
+            <h1>></h1>
+        </div>
+    </div>
+    <div id="task-next" style="display: none">
+        <input class="add" type="number" placeholder="a"> + <input class="add" type="number" placeholder="b"> = <span
+            class="add"></span>
+        <button value="+" onclick="calculate(value)">Calculate</button>
+        <br>
+        <input class="div" type="number" placeholder="a"> / <input class="div" type="number" placeholder="b"> = <span
+            class="div"></span>
+        <button value="/" onclick="calculate(value)">Calculate</button>
+        <br>
+        <input class="multiple" type="number" placeholder="a"> * <input class="multiple" type="number" placeholder="b">
+        = <span class="multiple"></span>
+        <button value="*" onclick="calculate(value)">Calculate</button>
+        <br>
+        <input class="minus" type="number" placeholder="a"> - <input class="minus" type="number" placeholder="b"> =
+        <span class="minus"></span>
+        <button value="-" onclick="calculate(value)">Calculate</button>
+        <br>
+        <hr>
+        <input id="palindrome" type="text" placeholder="Enter sentence">
+        <button onclick="checkPalindrome()">Check</button>
+        <h1 id="checkPalindrome"></h1>
+    </div>
+</div>
+
+<script src="js/index.js" defer></script>
+</body>
+</html>

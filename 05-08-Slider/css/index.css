@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-task-text {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    z-index: 3;
+    margin: 6px 32px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-task {
+    background: #6266d7;
+    border: 1px solid gray;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    transition: background 0.5s ease;
+}
+
+.btn-task-hover {
+    position: absolute;
+    background: #5054d5;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 0;
+    z-index: 2;
+    transition: width 0.5s ease;
+}
+
+#task-slider {
+    position: relative;
+    height: 500px;
+    width: 800px;
+    display: flex;
+}
+
+.btn-task-text:hover ~ .btn-task-hover {
+    width: 150px;
+}
+
+.btn-slide-next, .btn-slide-prev {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    width: 70px;
+    height: 100%;
+    text-align: center;
+    transform: perspective(1000px) rotateY(-70deg);
+    background-color: rgba(0,0,0,0.3);
+    transform-origin: right;
+    transition: transform 1.0s ease;
+
+}
+
+.btn-slide-next {
+    right: 0;
+}
+
+.btn-slide-next:hover , .btn-slide-prev:hover{
+    transform: rotateY(0deg);
+
+}
