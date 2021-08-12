@@ -1,0 +1,15 @@
+#removeBox , #circleBox, #items{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.box {
+    height: 200px;
+    width: 100%;
+    margin: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+}
