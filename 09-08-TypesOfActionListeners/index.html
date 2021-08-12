@@ -27,6 +27,18 @@
 <section style="display: none" id="section-guessNumber">
     <div class="section">
         <h1>Guess the number</h1>
+        <h2 id="guess-number-info">You have to guess number in range (0, 100).<br>
+            Press button "start" to start the game.</h2>
+        <button id="btn-guess-number-start" class="btn">start</button>
+        <div class="guess-number-box">
+            <label for="user-number"></label><br>
+            <input id="user-number" type="number" min="0" max="100"><br>
+            <button id="btn-number-check" class="btn">check</button>
+        </div>
+        <div class="guess-number-result">
+            <h2></h2>
+            <button class="btn" id="guess-repeat">again</button>
+        </div>
     </div>
 </section>
 <section style="display: none" id="section-rememberOder">
@@ -59,6 +71,7 @@
     </div>
 </section>
 <script src="./js/menu.js" defer></script>
+<script src="./js/guessNumber.js" defer></script>
 <script src="./js/guessWord.js" defer></script>
 </body>
 </html>

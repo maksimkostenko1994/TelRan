@@ -70,3 +70,13 @@ input {
     font-size: 1.5em;
     color: #239391;
 }
+
+.guess-number-box, .guess-number-result {
+    display: none;
+}
+
+.guess-number-box label {
+    font-size: 1.5em;
+    display: block;
+    padding: 10px;
+}

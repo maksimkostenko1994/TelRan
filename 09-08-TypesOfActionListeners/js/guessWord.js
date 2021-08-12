@@ -10,7 +10,7 @@ const playGame = () => {
     document.querySelector('.section .guess-word').style.display = 'block';
     play.style.display = 'none';
     WORD = words[getRandomWord(words)]
-    document.querySelector('#word-length').innerText = `You word is ${WORD.length} letter`;
+    document.querySelector('#word-length').innerText = `You word consist of ${WORD.length} letters`;
     document.querySelector('#guess-word').innerText = getWord(WORD);
     RESULT = getWord(WORD);
 }
