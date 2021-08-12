@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffa7a7;
+}
+
+.todo {
+    width: 300px;
+    margin: 40px auto;
+    border-top: 1px solid #d00a0a;
+    border-left: 1px solid #d00a0a;
+    border-right: 1px solid #d00a0a;
+    padding: 15px;
+    box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+    border-radius: 5px 5px 0 0;
+}
+
+.todo form {
+    /*border: 1px solid red;*/
+}
+
+#todo, .btn-add {
+    height: 30px;
+}
+
+#todo{
+    width: 79%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    color: white;
+    margin-inline: -4px;
+    margin-left: 4px;
+    outline: none;
+    background-color: #ffa7a7;
+    border-bottom: 1px solid #d00a0a;
+}
+
+.btn-add {
+    width: 19%;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bolder;
+    background-color: #d00a0a;
+    color: white;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.5s ease;
+}
+
+.btn-add:hover {
+    background-color: #f83030;
+}
+
+.list {
+    padding: 15px;
+    list-style-type: none;
+}
+
