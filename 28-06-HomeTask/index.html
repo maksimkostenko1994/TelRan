@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28-06-HomeTask</title>
+    <script src="./requirejs-master/require.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<script src="./index.js"></script>
+<div class="main">
+    <div class="container">
+        <nav style="opacity: 0">
+            <ul>
+                <li>Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+            </ul>
+        </nav>
+        <div class="sum">
+            <div class="number-1">
+                <button class="number-minus" type="button"
+                        onclick="this.nextElementSibling.nextElementSibling.stepDown()">-
+                </button>
+                <label for="first"></label>
+                <input id="first" type="number" min="0" max="99" value="0" readonly>
+                <button class="number-plus" type="button"
+                        onclick="this.previousElementSibling.stepUp();">+
+                </button>
+            </div>
+            <div class="number-2">
+                <button class="number-minus" type="button"
+                        onclick="this.nextElementSibling.nextElementSibling.stepDown();">-
+                </button>
+                <label for="second"></label>
+                <input id="second" type="number" max="99" value="0" readonly>
+                <button class="number-plus" type="button"
+                        onclick="this.previousElementSibling.stepUp();">+
+                </button>
+            </div>
+            <div class="submit" onclick="getSum()">Submit</div>
+            <div class="result"></div>
+        </div>
+        <div class="authorization">
+            <div class="auth">
+                <label for="login"></label>
+                <input id="login" type="text" placeholder="Enter login..." required>
+                <input id="btn-submit" type="button" value="Submit" onclick="getLogin()">
+                <label for="auth"></label>
+                <input id="auth" type="text" readonly>
+            </div>
+        </div>
+        <div class="range-box">
+            Enter age:
+            <div class="number-1">
+                <button name="check-age" class="number-minus" type="button"
+                        onclick="minus()">-
+                </button>
+                <label for="age"></label>
+                <input id="age" type="number" min="0" max="99" value="0" readonly>
+                <button name="check-age" class="number-plus" type="button"
+                        onclick="plus()">+
+                </button>
+            </div>
+            <form>
+<!--                <label for="checkYes">Condition 1/2: </label>-->
+<!--                <div class="radio-container">-->
+<!--                    <input id="checkYes" type="radio" name="condition" checked>-->
+<!--                    <span class="my-radio"></span>-->
+<!--                </div>-->
+<!--                <label for="checkNo"></label>-->
+<!--                <div class="radio-container">-->
+<!--                    <input id="checkNo" type="radio" name="condition">-->
+<!--                    <span class="my-radio"></span>-->
+<!--                </div>-->
+                <label for="check-result"></label>
+                <input id="check-result" type="text" value="Out of range!" readonly>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

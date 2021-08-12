@@ -1,0 +1,67 @@
+.authorization {
+    display: inline-block;
+    position: relative;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 31px 15px;
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 160px;
+}
+
+.authorization .auth {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.authorization input[type="text"] {
+    height: 30px;
+    border-radius: 5px 0 0 0;
+    border: none;
+    background-color: rgba(234, 36, 36, 0.4);
+    color: white;
+    width: 70%;
+    padding-left: 5px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.authorization input::placeholder {
+    color: rgba(255, 255, 255, 0.52);
+}
+
+.authorization input:focus {
+    outline: none;
+}
+
+.authorization input[type='button'] {
+    background-color: rgba(234, 36, 36, 0.4);
+    border-radius: 0 5px 0 0;
+    width: 30%;
+    height: 30px;
+    border: 1px solid white;
+    transition: background-color 0.5s ease;
+}
+
+.authorization input[type='button']:hover {
+    background-color: rgba(234, 36, 36, 0.7);
+    cursor: pointer;
+}
+
+.authorization #auth {
+    height: 50px;
+    border-radius: 0 0 5px 5px;
+    border: none;
+    background-color: rgba(234, 36, 36, 0.4);
+    color: white;
+    width: 100%;
+    padding-left: 5px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    text-align: center;
+    font-size: 30px;
+}
