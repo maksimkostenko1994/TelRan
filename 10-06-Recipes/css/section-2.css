@@ -1,0 +1,49 @@
+section#section-2 {
+    margin-top: -85px;
+}
+
+.section-container-2 {
+    background: url('../images/Tomatoes_Pasta.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    margin-top: 75px;
+    padding-top: 100px;
+}
+
+.person-img {
+    height: 150px;
+    width: 150px;
+    border: 2px solid #afafaf;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section-container-2 p {
+    text-align: center;
+    opacity: 0.8;
+}
+
+.section-container-2 p.comment {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.section-container-2 p.author {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.section-container-2 ol {
+    text-align: center;
+}
+
+.section-container-2 ol li{
+    display: inline-block;
+    color: rgba(137, 137, 137, 0.8);
+}
+
+.section-container-2 ol li:nth-child(1){
+    color: white;
+}

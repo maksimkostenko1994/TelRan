@@ -1,0 +1,63 @@
+.section-container-3 {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+section#section-3 a {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 300px;
+}
+
+section#section-3 a div{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    text-transform: uppercase;
+    width: 300px;
+}
+
+section#section-3 a hr {
+    width: 110px;
+    background-color: orange;
+    height: 4px;
+    margin: 0 auto;
+    transition: width 0.5s;
+}
+
+section#section-3 a:hover hr {
+    width: 240px;
+}
+
+#section-3 .menu {
+    margin: 2px;
+    flex-grow: 1;
+}
+
+.menu img {
+    display: inline-block;
+    width: 200px;
+}
+.menu h2 {
+    position: absolute;
+    padding: 33px 30px;
+    width: 200px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.menu h1 {
+    position: absolute;
+    text-transform: uppercase;
+    padding: 50px 30px;
+    width: 200px;
+    text-align: center;
+    font-size: 27px;
+}

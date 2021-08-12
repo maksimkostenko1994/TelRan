@@ -1,0 +1,148 @@
+section.application {
+    position: relative;
+}
+
+.sc1-top {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section-container-1 hr {
+    margin: 0 auto;
+    height: 3px;
+    width: 80%;
+    background-color: gray;
+}
+
+.item {
+    margin: 40px 30px;
+    width: calc(100% / 3 - 30px);
+    text-align: center;
+    padding: 33px 15px;
+}
+
+.item p.item-link {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.item p.item-info {
+    color: black;
+    font-size: 10px;
+    padding: 10px 20px;
+}
+
+.item-img {
+    border: 2px solid #ff3232;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.item-img img#top-1 {
+    padding: 14px 12px;
+    height: 100px;
+    margin: -5px 0;
+}
+
+.item-img img#top-2 {
+    padding: 14px 12px;
+    height: 100px;
+    margin: -5px 0;
+}
+
+.item-img img#top-3 {
+    padding: 14px 12px;
+    height: 100px;
+    margin: -5px 0;
+}
+
+
+.item div {
+    cursor: pointer;
+}
+
+.item div hr {
+    background: red;
+    height: 2px;
+    width: 50px;
+    margin: 4px auto;
+    transition: width 0.5s;
+}
+
+.item div:hover hr {
+    width: 135px;
+}
+
+.sc1-bot {
+    margin: 0 auto;
+    padding-top: 130px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.app-img {
+    position: relative;
+    width: 100%;
+}
+
+.app-bg {
+    position: absolute;
+    width: 297px;
+    right: 0;
+    bottom: 0;
+}
+
+.app-insert {
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+    width: 230px;
+    margin-right: 25px;
+}
+
+.app-info {
+    position: relative;
+    margin-top: 50px;
+    padding: 0 40px;
+    margin-bottom: 80px;
+}
+
+.app-info div {
+    width: 275px;
+    cursor: pointer;
+}
+
+.app-info h3, .app-info p {
+    color: black;
+}
+
+.app-info div h3 {
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+
+.app-info p {
+    font-size: 13px;
+    padding: 20px 0;
+}
+
+.app-info hr {
+    margin: 0;
+    width: 95px;
+    height: 3px;
+    background-color: red;
+    text-align: left;
+    transition: width 0.5s;
+}
+
+.app-info div:hover hr {
+    width: 275px;
+}
