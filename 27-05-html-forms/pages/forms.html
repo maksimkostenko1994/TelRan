@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+<div align="center">
+    <img src="../assets/klipartz.png" width="100" alt="logo">
+    <h1 style="margin-top: -20px">Hello world!</h1>
+</div>
+<div align="center">
+    <div style="background-color: rgb(25,140,163); width: 200px; display: inline-block;">
+        <a href="../index.html"><h3>HOME</h3></a>
+    </div>
+    <div style="display: inline-block; width: 200px;background-color: rgb(10,192,227);">
+        <a href="../pages/forms.html"><h3>FORMS</h3></a>
+    </div>
+    <div style="display: inline-block; width: 200px;background-color: rgb(23,224,104);">
+        <a href="../pages/other.html"><h3>OTHER</h3></a>
+    </div>
+</div>
+<hr>
+<div align="center">
+    <h2>Registration</h2>
+    <fieldset style="width: 200px">
+        <legend style="text-align: center">Fill the form</legend>
+        <label for="registration">Name:</label><br>
+        <input id="registration" type="text" placeholder="Enter your name..." size="100">
+        <br>
+        <label for="email">Email:</label><br>
+        <input id="email" type="email" placeholder="Enter your email..." size="100">
+        <br>
+        <label for="password">Password:</label><br>
+        <input id="password" type="password" placeholder="Enter your password..." size="100">
+        <br>
+        <label for="male">Male:</label>
+        <input type="radio" id="male" value="male">
+        <label for="female">Female:</label>
+        <input type="radio" id="female" value="male">
+        <br>
+        <label for="color"></label>
+        <select id="color" style="margin-top: 20px">
+            <option>Select your favourite color...</option>
+            <option value="white"></option>
+            <option value="black"></option>
+            <option value="pink"></option>
+        </select>
+        <br>
+        <label for="data"></label>
+        <input style="margin-top: 20px;" id="data" type="date" data-format="dd.mm.yyyy">
+        <br>
+        <form style="margin: 20px;">
+            <input type="submit" value="send" style="margin-right: 20px;"><input type="reset" value="reset">
+        </form>
+    </fieldset>
+</div>
+<hr>
+<div align="center">
+    <div align="center" style="width: 500px;">
+        <h1>Send your massage</h1>
+        <form action="#" method="get">
+            <label for="email-form" style="margin-right: 50px">E-mail:</label>
+            <input style="margin-right: 50px" id="email-form" type="email" placeholder="Type your email..." size="50">
+            <br>
+            <div style="padding-right: 10px; text-align: center; margin-top: 20px;">
+                <label for="massage-form" style="margin-right: 50px; vertical-align: top;">Massage:</label>
+                <textarea id="massage-form" style="margin-right: 50px; width: 310px; height: 100px;"></textarea>
+            </div>
+            <div style="margin-right: 50px;display: inline-block; width: 50px;">Do you like birds?</div>
+            <div style="margin-right: 270px; vertical-align: top;  display: inline-block;">
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes">
+                <label for="no">No</label>
+                <input type="radio" id="no">
+            </div>
+            <div align="right" style="margin-right: 60px;">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        </form>
+    </div>
+</div>
+<div></div>
+<hr>
+<div align="center" style="background-color: #11bbb4;">
+    <ol start="10" style="display: inline-block; text-align: left; margin: 0 20px;">
+        <li><h2>Item 10</h2></li>
+        <li><h2>Item 11</h2></li>
+        <li><h2>Item 12</h2></li>
+    </ol>
+    <ul style="display: inline-block; text-align: left; list-style-type: square; margin: 0 20px;">
+        <li><h2>Item 1</h2></li>
+        <li><h2>Item 2</h2></li>
+        <li><h2>Item 3</h2></li>
+    </ul>
+</div>
+</body>
+</html>
