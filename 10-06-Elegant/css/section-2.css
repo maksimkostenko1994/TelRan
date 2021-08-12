@@ -1,0 +1,72 @@
+section .sc-2 {
+    background: url('../images/img_10.jpeg') no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 764px;
+}
+
+section .sc-2 .text-item-1 {
+    position: relative;
+    width: 50%;
+    padding: 50px 70px;
+    margin-top: 100px;
+    margin-right: 50px;
+    right: 0;
+    float: right;
+}
+
+section .sc-2 .text-item-1 h3 {
+    color: rgb(236, 111, 190);
+    padding: 15px 0;
+}
+
+section .sc-2 .text-item-1 h1 {
+    font-size: 22px;
+    font-weight: 1000;
+}
+
+section .sc-2 .text-item-1 p {
+    padding-top: 25px;
+}
+
+section .sc-2 .text-item-1 div {
+    display: inline-block;
+    width: 49%;
+    padding: 15px 25px;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+section .sc-2 .text-item-2 {
+    position: relative;
+    width: 50%;
+    right: 0;
+    float: right;
+    margin-right: 50px;
+    padding: 25px 50px;
+}
+
+section .sc-2 .text-item-2 h3 {
+    color: rgb(236, 111, 190);
+    padding: 15px 0;
+}
+
+section .sc-2 .text-item-2 h1 {
+    font-size: 22px;
+    font-weight: 1000;
+}
+
+section .sc-2 .text-item-2 p {
+    padding-top: 25px;
+}
+
+section .sc-2 .text-item-2 div {
+    display: inline-block;
+    width: 49%;
+    padding: 15px 25px;
+}
+
+section .sc-2 .text-item-2 div img {
+    padding: 15px 0;
+}
+
