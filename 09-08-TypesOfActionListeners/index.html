@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>09-08-TypesOfActionListeners</title>
+</head>
+<body>
+<header>
+    <nav class="menu">
+        <a href="#home" id="home">Home</a>
+        <a href="#guess-number" id="guessNumber">Guess the number</a>
+        <a href="#remember-order" id="rememberOder">Remember the order</a>
+        <a href="#translate-word" id="translateWord">Translate the word</a>
+        <a href="#guess-word" id="guessWord">Guess the word</a>
+    </nav>
+</header>
+<section style="display: block" id="section-home">
+    <div class="section">
+        <h1>Welcome to the site of games</h1>
+        <h2>Select the game and enjoy</h2>
+    </div>
+</section>
+<section style="display: none" id="section-guessNumber">
+    <div class="section">
+        <h1>Guess the number</h1>
+    </div>
+</section>
+<section style="display: none" id="section-rememberOder">
+    <div class="section">
+        <h1>Remember the oder</h1>
+    </div>
+</section>
+<section style="display: none" id="section-translateWord">
+    <div class="section">
+        <h1>Translate the word</h1>
+    </div>
+</section>
+<section style="display: none" id="section-guessWord">
+    <div class="section">
+        <h1>Guess the word</h1>
+        <button class="btn" style="display: block" id="play">Start the game</button>
+        <div style="display: none" class="guess-word">
+            <h2 id="word-length">You word is letter</h2>
+            <h1 id="guess-word">Word</h1>
+            <h2>enter the letter</h2>
+            <input id="letter" type="text" maxlength="1"><br>
+            <span id="validator"></span><br>
+            <button class="btn" id="check">Check</button>
+        </div>
+        <div id="winner" style="display: none">
+            <h1>YOU WIN</h1>
+            <h2></h2>
+            <button id="again" class="btn">again</button>
+        </div>
+    </div>
+</section>
+<script src="./js/menu.js" defer></script>
+<script src="./js/guessWord.js" defer></script>
+</body>
+</html>

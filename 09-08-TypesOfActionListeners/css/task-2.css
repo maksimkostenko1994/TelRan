@@ -1,0 +1,27 @@
+.title {
+    text-align: center;
+}
+
+.add-box {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.add-box input {
+    width: 300px;
+}
+
+.add-box button {
+    width: 75px;
+    cursor: pointer;
+}
+
+.list {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.list ul li {
+    list-style-type: none;
+}
