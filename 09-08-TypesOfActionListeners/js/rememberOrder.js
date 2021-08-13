@@ -38,7 +38,6 @@ const startRememberGame = () => {
     clearInput(userAnswerInput)
     answerRememberBox.querySelector('label').innerHTML = ''
     rememberArray = createArray();
-    console.log(rememberArray)
     showElements(rememberBox, rememberBox.querySelector('h2'), btnShowOrder)
     attemptRemember = 3;
 }
@@ -64,7 +63,6 @@ btnShowOrder.onclick = () => {
             clearInterval(interval);
             hideElements(rememberBox.querySelector('h2'), rememberBox.querySelector('#index'), rememberBox.querySelector('#timer'), rememberBox.querySelector('#array-remember-info'))
             randomIndexRememberArray = getRandomIndex(rememberArray)
-            console.log(randomIndexRememberArray)
             answerRememberBox.querySelector('h2').innerText = `What is the index of ${rememberArray[randomIndexRememberArray]}?`
             showElements(answerRememberBox)
         } else rememberBox.querySelector('#timer').innerText = timer
@@ -89,19 +87,6 @@ btnCheckUserAnswer.onclick = () => {
         attemptRemember--
         answerRememberBox.querySelector('label').innerHTML = `Index ${userAnswer} is incorrect. You have ${attemptRemember} attempt. <br>Try again!`
     }
-}
-
-
-function hideElements() {
-    for (let item of arguments) item.style.display = 'none'
-}
-
-function showElements() {
-    for (let item of arguments) item.style.display = 'block'
-}
-
-function clearInput() {
-    for (let item of arguments) item.value = ''
 }
 
 btnRepeatRememberGame.onclick = () => startRememberGame();

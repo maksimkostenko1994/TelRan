@@ -117,4 +117,18 @@ input {
     flex-grow: 1;
 }
 
+.translation-game-box, .translation-check-box, .translation-result-box {
+    display: none;
+}
+
+.translation-game-box label, .translation-check-box label{
+    color: red;
+    font-size: 1.4em;
+}
+
+#btn-choose-language:disabled {
+    background: rgba(0,0,0,0.1);
+}
+
+
 

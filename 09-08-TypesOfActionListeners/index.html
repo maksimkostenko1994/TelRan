@@ -70,6 +70,27 @@
 <section style="display: none" id="section-translateWord">
     <div class="section">
         <h1>Translate the word</h1>
+        <h2 id="translation-game-info">Here you can increase you knowledge of language.<br>Press "START to run the game.</h2>
+        <button class="btn" id="btn-start-translation">Start</button>
+        <div class="translation-game-box">
+            <h3></h3>
+            <h2></h2>
+            <input type="text" placeholder="From" id="language-from"><br><label for="language-from"></label><br>
+            <h2></h2><br>
+            <input type="text" placeholder="To" id="language-to"><br><label for="language-to"></label><br>
+            <button class="btn" id="btn-choose-language">Choose</button>
+        </div>
+        <div class="translation-check-box">
+            <h2></h2>
+            <h3></h3>
+            <input type="text" id="user-translate"><br>
+            <label for="user-translate"></label><br>
+            <button class="btn" id="check-user-translation">Check</button>
+        </div>
+        <div class="translation-result-box">
+            <h2></h2>
+            <button class="btn" id="translation-game-repeat">Repeat</button>
+        </div>
     </div>
 </section>
 <section style="display: none" id="section-guessWord">
@@ -82,7 +103,7 @@
             <h1 id="guess-word">Word</h1>
             <h2>enter the letter</h2>
             <input id="letter" type="text" maxlength="1"><br>
-            <span id="validator"></span><br>
+            <label for="letter"><span id="validator"></span></label><br>
             <button class="btn" id="check">Check</button>
         </div>
         <div id="winner" style="display: none">
@@ -92,9 +113,11 @@
         </div>
     </div>
 </section>
+<script src="./js/index.js" defer></script>
 <script src="./js/menu.js" defer></script>
 <script src="./js/guessNumber.js" defer></script>
 <script src="./js/rememberOrder.js" defer></script>
+<script src="./js/translationGame.js" defer></script>
 <script src="./js/guessWord.js" defer></script>
 </body>
 </html>
