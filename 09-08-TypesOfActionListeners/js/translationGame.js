@@ -130,14 +130,14 @@ btnCheckUserTranslation.onclick = () => {
     if (userAnswer === '' || userAnswer === null) {
         translationCheckBox.querySelector('label').innerText = 'Please, type a word'
     } else if (userAnswer === wordsTo[wordIndex]) {
-        wordsFrom.splice(wordIndex, 1)
+        wordsFrom = wordsFrom.filter(item => item!==wordsFrom[wordIndex])
         if (wordsFrom.length === 0 && attemptTranslation > 1) {
             translationResultBox.querySelector('h2').innerHTML = `Congratulation! You win!<br> Press "REPEAT" to play again!`
             hideElements(translationCheckBox)
             showElements(translationResultBox)
         }
         else {
-            wordsTo.splice(wordIndex, 1)
+            wordsTo = wordsTo.filter(item => item!==wordsTo[wordIndex])
             wordIndex = randomWordIndex(wordsFrom)
             translationCheckBox.querySelector('h2').innerText = `How will be ${wordsFrom[wordIndex].toUpperCase()} on ${languageTo}?`
         }
