@@ -8,7 +8,7 @@ const guessNumberInfo = document.querySelector('#guess-number-info'),
 
 let botRange, topRange, randomNumber, attempt;
 
-const startGameGuessNumber = () =>{
+const startGameGuessNumber = () => {
     botRange = 0;
     topRange = 100;
     btnStartGuessNumber.style.display = 'none'
@@ -18,7 +18,6 @@ const startGameGuessNumber = () =>{
     userNumberInput.value = ''
     guessNumberBox.querySelector('label').innerText = `Please, input number from ${botRange} to ${topRange}.`
     randomNumber = getRandomNumber();
-    console.log(randomNumber)
     attempt = 5
 }
 
@@ -31,10 +30,13 @@ const getRandomNumber = () => {
 btnNumberCheck.onclick = () => {
     const predict = parseInt(userNumberInput.value);
     switch (true) {
-        case predict>topRange || predict<botRange:
+        case isNaN(predict):
+            guessNumberBox.querySelector('label').innerHTML = `Guessed number should be a Number. <br> Please, input number from ${botRange} to ${topRange}.`
+            break
+        case predict > topRange || predict < botRange:
             guessNumberBox.querySelector('label').innerHTML = `Guessed number is out range. <br> Please, input number from ${botRange} to ${topRange}.`
             break
-        case attempt === 1:
+        case attempt < 1:
             guessNumberBox.style.display = 'none'
             guessNumberResult.style.display = 'block'
             guessNumberResult.querySelector('h2').innerHTML = `You lose! The suggest word was ${randomNumber}.<br> Press "REPEAT" to try again.`

@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+.active {
+    color: white !important;
+}
+
 .menu {
     height: 75px;
     width: 100%;
@@ -35,7 +39,7 @@
 }
 
 .section h1 {
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 2.5em;
     text-transform: uppercase;
 }
@@ -69,6 +73,7 @@ input {
     padding-left: 10px;
     font-size: 1.5em;
     color: #239391;
+    margin-top: 15px;
 }
 
 .guess-number-box, .guess-number-result {
@@ -80,3 +85,36 @@ input {
     display: block;
     padding: 10px;
 }
+
+.remember-box, .answer-remember-box, .remember-result-box {
+    display: none;
+}
+
+.answer-remember-box label {
+    font-size: 1.5em;
+    color: red;
+}
+
+.remember-box p {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    color: black;
+}
+
+#index, #array-remember-info {
+    width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#index span, #array-remember-info span {
+    font-weight: bolder;
+    border: 1px solid black;
+    text-align: center;
+    width: 30px;
+    flex-grow: 1;
+}
+
+
