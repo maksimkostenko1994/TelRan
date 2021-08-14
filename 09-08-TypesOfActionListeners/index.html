@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>09-08-TypesOfActionListeners</title>
+</head>
+<body>
+<header>
+    <nav class="menu">
+        <a href="#home" id="home" class="active">Home</a>
+        <a href="#guess-number" id="guessNumber">Guess the number</a>
+        <a href="#remember-order" id="rememberOder">Remember the order</a>
+        <a href="#translate-word" id="translateWord">Translate the word</a>
+        <a href="#guess-word" id="guessWord">Guess the word</a>
+    </nav>
+</header>
+<section style="display: block" id="section-home">
+    <div class="section">
+        <h1>Welcome to the site of games</h1>
+        <h2>Select the game and enjoy</h2>
+    </div>
+</section>
+<section style="display: none" id="section-guessNumber">
+    <div class="section">
+        <h1>Guess the number</h1>
+        <h2 id="guess-number-info">You have to guess number in range (0, 100).<br>
+            Press button "start" to start the game.</h2>
+        <button id="btn-guess-number-start" class="btn">start</button>
+        <div class="guess-number-box">
+            <label for="user-number"></label><br>
+            <input id="user-number" type="number" min="0" max="100"><br>
+            <button id="btn-number-check" class="btn">check</button>
+        </div>
+        <div class="guess-number-result">
+            <h2></h2>
+            <button class="btn" id="guess-repeat">again</button>
+        </div>
+    </div>
+</section>
+<section style="display: none" id="section-rememberOder">
+    <div class="section">
+        <h1>Remember the oder</h1>
+        <h2 id="remember-info">Here you must remember the array of number and answer on question.<br>
+            Press "START" to play the game. Good luck!</h2>
+        <button class="btn" id="btn-start-remember">start</button>
+        <div class="remember-box">
+            <h2>You will have 10 seconds to remember the order. <br>
+                Press "SHOW ORDER" when you will be ready. </h2>
+            <button class="btn" id="show-order">show order</button>
+            <h2 id="timer"></h2>
+            <p id="index"></p>
+            <p id="array-remember-info"></p>
+        </div>
+        <div class="answer-remember-box">
+            <h2></h2>
+            <input type="number" id="user-remember-answer"><br>
+            <label for="user-remember-answer"></label><br>
+            <button class="btn" id="check-user-index">check</button>
+        </div>
+        <div class="remember-result-box">
+            <h2></h2>
+            <button class="btn" id="repeat-order">Repeat</button>
+        </div>
+    </div>
+</section>
+<section style="display: none" id="section-translateWord">
+    <div class="section">
+        <h1>Translate the word</h1>
+        <h2 id="translation-game-info">Here you can increase you knowledge of language.<br>Press "START to run the game.</h2>
+        <button class="btn" id="btn-start-translation">Start</button>
+        <div class="translation-game-box">
+            <h3></h3>
+            <h2></h2>
+            <input type="text" placeholder="From" id="language-from"><br><label for="language-from"></label><br>
+            <h2></h2><br>
+            <input type="text" placeholder="To" id="language-to"><br><label for="language-to"></label><br>
+            <button class="btn" id="btn-choose-language">Choose</button>
+        </div>
+        <div class="translation-check-box">
+            <h2></h2>
+            <h3></h3>
+            <input type="text" id="user-translate"><br>
+            <label for="user-translate"></label><br>
+            <button class="btn" id="check-user-translation">Check</button>
+        </div>
+        <div class="translation-result-box">
+            <h2></h2>
+            <button class="btn" id="translation-game-repeat">Repeat</button>
+        </div>
+    </div>
+</section>
+<section style="display: none" id="section-guessWord">
+    <div class="section">
+        <h1>Guess the word</h1>
+        <h2 id="guess-word-info">This game is called "FIELD of MIRACLES".<br> Press "START" to run the game.</h2>
+        <button class="btn" style="display: block" id="play">Start</button>
+        <div style="display: none" class="guess-word">
+            <h2 id="word-length">You word is letter</h2>
+            <h1 id="guess-word">Word</h1>
+            <h2>enter the letter</h2>
+            <input id="letter" type="text" maxlength="1"><br>
+            <label for="letter"><span id="validator"></span></label><br>
+            <button class="btn" id="check">Check</button>
+        </div>
+        <div id="winner" style="display: none">
+            <h1>YOU WIN</h1>
+            <h2></h2>
+            <button id="again" class="btn">again</button>
+        </div>
+    </div>
+</section>
+<script src="./js/index.js" defer></script>
+<script src="./js/menu.js" defer></script>
+<script src="./js/guessNumber.js" defer></script>
+<script src="./js/rememberOrder.js" defer></script>
+<script src="./js/translationGame.js" defer></script>
+<script src="./js/guessWord.js" defer></script>
+</body>
+</html>
