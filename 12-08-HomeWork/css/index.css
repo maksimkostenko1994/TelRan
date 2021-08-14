@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+button {
+    margin: 20px auto;
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #6a70a8;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+    font-weight: bolder;
+}
+
+.content {
+    padding: 0 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
