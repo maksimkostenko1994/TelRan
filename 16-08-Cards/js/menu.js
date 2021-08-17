@@ -1,7 +1,8 @@
 const btnHome = document.querySelector('#homeBtn'),
     btnCart = document.querySelector('#cartBtn')
 
-let objArray  = getObjects();
+let objArray = getObjects();
+let basketObj;
 
 function getObjects() {
     const itemsObject = [];
@@ -10,6 +11,7 @@ function getObjects() {
         itemsObject.push(item)
     return itemsObject;
 }
+
 
 btnHome.onclick = () => {
     root.style.display = 'grid'
@@ -20,11 +22,16 @@ btnHome.onclick = () => {
         root.append(createElement(item))
     }
     objArray = getObjects();
-    objArray.forEach(item => item.querySelector('.btn').onclick = (event) => {
+    objArray.forEach(item => item.querySelector('.btn').onclick = () => {
         const obj = goods.filter(el => objArray.indexOf(item) === goods.indexOf(el))[0];
-        obj.quantity++
-        const price = obj.quantity * obj.price;
-        item.querySelector('p').innerHTML = `Price: € ${price}`
+        const isExist = basket.filter(el => el.title === obj.title)[0]
+        if (isExist === undefined) {
+            basketObj = createBasket(obj)
+            basket.push(basketObj)
+        } else {
+            basketObj.quantity++
+            item.querySelector('p').innerHTML = `Price: € ${obj.price}`
+        }
     })
 }
 
@@ -36,9 +43,9 @@ btnCart.onclick = () => {
     const tbody = document.createElement('tbody')
     btnHome.classList.remove('active')
     btnCart.classList.add('active')
-    for (let item of goods)
+    for (let item of basket)
         createTable(item, tbody);
     table.append(tbody)
     root.append(table)
-    root.append(createTotal(goods));
+    root.append(createTotal(basket));
 }

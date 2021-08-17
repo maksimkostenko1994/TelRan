@@ -8,7 +8,7 @@ const createElement = (good) => {
     const h3 = document.createElement('h3')
     h3.innerText = good.description
     const p = document.createElement('p')
-    p.innerText = `Price: € ${good.price * good.quantity}`
+    p.innerText = `Price: € ${good.price}`
     const btn = document.createElement('button')
     btn.classList.add('btn')
     btn.innerText = 'add to card'
@@ -18,6 +18,16 @@ const createElement = (good) => {
     div.append(p)
     div.append(btn)
     return div;
+}
+
+const createBasket = (good) => {
+    return {
+        picture: good.picture,
+        title: good.title,
+        description: good.description,
+        price: good.price,
+        quantity: 1
+    }
 }
 
 for (let item of goods) {
