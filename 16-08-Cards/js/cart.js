@@ -2,7 +2,6 @@ const table = document.createElement('table')
 
 const createTable = (good, tbody) => {
     tbody.innerHTML += `<tr><td>${good.title}</td><td>€ ${good.price}</td><td>${good.quantity}</td><td>€ ${good.price*good.quantity}</td></tr>`
-    return tbody
 }
 
 const createTotal = (goods) => {
