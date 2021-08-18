@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin: 100px auto 20px auto;
+    font-size: 2.6em;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-box label {
+    font-size: 1.2em;
+    color: #d54444;
+}
+
+.form-box span {
+    font-size: 1.6em;
+}
+
+.form-box input {
+    width: 200px;
+    height: 30px;
+    padding-left: 8px;
+    margin-left: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.form-box button {
+    width: 100px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.date {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.date span {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.date h1 {
+    font-size: 6em;
+    font-weight: 200;
+}
