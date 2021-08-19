@@ -56,6 +56,9 @@ inputDate.oninput = (event) => {
         inputDate.value += `.`
     } else if (date.length === 5) {
         inputDate.value += `.`
+    } else if (date[date.length - 1] === '.') {
+        date.splice(date.length - 1, 1)
+        event.target.value = date.join('')
     }
 }
 
