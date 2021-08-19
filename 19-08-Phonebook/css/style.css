@@ -100,3 +100,37 @@ nav ul li a:hover {
     background-color: #0F7F12;
     border: 1px solid #5CA85E;
 }
+
+.phone-list {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.phone-box {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
+.phone-box div {
+    align-self: center;
+}
+
+.phone-box h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.phone-box h3 {
+    font-size: 1.4em;
+    font-weight: 200;
+}
+
+
+.phone-active {
+    background-color: #9CCA9D;
+}

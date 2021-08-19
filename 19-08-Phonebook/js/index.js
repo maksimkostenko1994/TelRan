@@ -6,7 +6,17 @@ const btnHome = document.querySelector('#btn-home'),
 const section = document.querySelector('section')
 
 //database
-const phonebook = []
+const phonebook = [
+    {
+        name: 'Max',
+        number: '1231231231231',
+        email: 'example@mail.com',
+    }, {
+        name: 'Max',
+        number: '1231231231231',
+        email: 'example@mail.com',
+    }
+]
 
 //add phone number section
 const filterArray = (array, elements) => {
@@ -18,8 +28,8 @@ const filterArray = (array, elements) => {
 }
 
 const checkEqual = (array, element) => {
-    for(let item of array)
-        if(item.email === element || item.number === element)
+    for (let item of array)
+        if (item.email === element || item.number === element)
             return true
     return false
 }
@@ -200,7 +210,19 @@ const addPhoneNumber = (array) => {
 //contacts section
 const createElementOfList = (item) => {
     const li = document.createElement('li')
-    li.setAttribute('id', `item_${item.id}`)
+    li.innerHTML = `<div><h1>${item.name}</h1><br><h3>${item.number}</h3></div><div><i class="fa fa-trash fa-2x" aria-hidden="true"></i></div>`
+    li.classList.add('phone-box')
+    return li
+}
+
+const createPhoneList = (array) => {
+    const div = document.createElement('div');
+    div.classList.add('phone-list');
+    const ul = document.createElement('ul')
+    for (let item of array)
+        ul.append(createElementOfList(item))
+    div.append(ul)
+    return div;
 }
 
 
@@ -208,6 +230,7 @@ btnHome.onclick = () => {
     section.innerHTML = ``
     btnHome.classList.add('active')
     btnAddPhone.classList.remove('active')
+    section.append(createPhoneList(phonebook))
 }
 
 btnAddPhone.onclick = () => {
