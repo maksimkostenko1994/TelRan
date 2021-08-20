@@ -94,7 +94,7 @@ const validateData = () => {
         case number1.length !== 3 || number2.length !== 2 || number3.length !== 2:
             labelPhone.innerHTML = `Phone number should be in pattern of +12-456-789-00-00`
             return false
-        case isNaN(codeCountry) || isNaN(codeProvider) || isNaN(number1) || isNaN(number2) || isNaN(number3):
+        case isNaN(+codeCountry) || isNaN(+codeProvider) || isNaN(+number1) || isNaN(+number2) || isNaN(+number3):
             labelPhone.innerHTML = `Some of your data is not a number`
             return false
         case checkSymbol !== true:
@@ -410,7 +410,6 @@ const findUser = () => {
         searchField.append(createUsersList(users))
     else {
         const foundUsers = users.filter(item => item.city === searchValue.value)
-        console.log(foundUsers)
         searchField.append(createUsersList(foundUsers))
     }
 }
