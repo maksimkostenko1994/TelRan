@@ -6,34 +6,7 @@ const btnHome = document.querySelector('#btn-home'),
 const section = document.querySelector('section')
 
 //database
-const phonebook = [
-    {
-        id: 1,
-        name: 'Max',
-        number: '1231231231231',
-        email: 'example@mail.com',
-        location: 'Kyiv',
-        description: 'Capitan',
-        selected: false
-    }, {
-        id: 2,
-        name: 'Max',
-        number: '1231231231231',
-        email: 'example@mail.com',
-        location: 'Mainz',
-        description: 'Iron Man',
-        selected: false
-    },
-    {
-        id: 5,
-        name: 'Max',
-        number: '1231231231231',
-        email: 'example@mail.com',
-        location: 'Berlin',
-        description: 'Hero',
-        selected: false
-    }
-]
+const phonebook = []
 
 //add phone number section
 const filterArray = (array, elements) => {
@@ -228,8 +201,6 @@ const addPhoneNumber = (array) => {
 const renderSection = () => {
     section.innerHTML = ''
     const isSelected = phonebook.find(item => item.selected === true);
-    console.log(isSelected)
-
     section.append(createPhoneList(phonebook))
     if (isSelected !== undefined)
         section.append(createCardOfNumber(isSelected))
@@ -246,7 +217,7 @@ const createElementOfList = (item) => {
     li.innerHTML = `<div><h1>${item.name}</h1><br><h3>${item.number}</h3></div><div><i class="fa fa-trash fa-2x" aria-hidden="true"></i></div>`
     li.classList.add('phone-box')
     if (item.selected) li.classList.add('phone-active')
-    li.onclick = (event) => {
+    li.addEventListener('click', function (event) {
         const id = +event.target.id.split('_')[1]
         const obj = phonebook.find(el => el.id === id);
         if (obj.selected === false) {
@@ -258,17 +229,17 @@ const createElementOfList = (item) => {
             liArray.filter(el => +el.id.split('_')[1] !== id).forEach(el => el.classList.remove('phone-active'))
             createCardOfNumber(obj).innerHTML = ``
             section.append(createCardOfNumber(obj))
-        } else {
-            obj.selected = false
-            li.classList.remove('phone-active')
         }
-        // if (event.target.classList.contains('fa')) {
-        //     removePhone(obj)
-        //     document.querySelector('.phone-card').innerHTML = ``
-        //     renderSection()
-        // }
-
-    }
+    })
+    li.addEventListener('click', function (event) {
+        if (event.target.classList.contains('fa')) {
+            const id = +event.currentTarget.id.split('_')[1]
+            const obj = phonebook.find(el => el.id === id);
+            removePhone(obj)
+            document.querySelector('.phone-card').innerHTML = ``
+            renderSection()
+        }
+    })
     return li
 }
 
