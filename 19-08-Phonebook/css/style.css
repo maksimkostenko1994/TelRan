@@ -106,6 +106,12 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
+.section-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .phone-box {
     list-style-type: none;
     display: flex;
@@ -114,6 +120,10 @@ nav ul li a:hover {
     border-bottom: 1px solid darkgrey;
     padding: 20px 15px;
     cursor: pointer;
+}
+
+.phone-box:hover {
+    background-color: #569f56;;
 }
 
 .phone-box div {
@@ -130,7 +140,37 @@ nav ul li a:hover {
     font-weight: 200;
 }
 
-
 .phone-active {
     background-color: #9CCA9D;
+}
+
+.phone-card {
+    width: 40%;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    background-color: #E7F2E7;
+    height: 100%;
+    padding: 15px 55px;
+}
+
+.phone-card h1 {
+    font-size: 3.4em;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.phone-card h3 {
+    margin: 10px 0;
+}
+
+.phone-card h3 span{
+    font-size: 2em;
+    margin-left: 15px;
+    font-weight: 200;
+}
+
+.phone-card h4 {
+    margin-top: 30px;
+    font-size: 1.6em;
+    font-weight: 200;
 }

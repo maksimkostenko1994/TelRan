@@ -8,13 +8,30 @@ const section = document.querySelector('section')
 //database
 const phonebook = [
     {
+        id: 1,
         name: 'Max',
         number: '1231231231231',
         email: 'example@mail.com',
+        location: 'Kyiv',
+        description: 'Capitan',
+        selected: false
     }, {
+        id: 2,
         name: 'Max',
         number: '1231231231231',
         email: 'example@mail.com',
+        location: 'Mainz',
+        description: 'Iron Man',
+        selected: false
+    },
+    {
+        id: 5,
+        name: 'Max',
+        number: '1231231231231',
+        email: 'example@mail.com',
+        location: 'Berlin',
+        description: 'Hero',
+        selected: false
     }
 ]
 
@@ -208,14 +225,55 @@ const addPhoneNumber = (array) => {
 }
 
 //contacts section
+const renderSection = () => {
+    section.innerHTML = ''
+    const isSelected = phonebook.find(item => item.selected === true);
+    console.log(isSelected)
+
+    section.append(createPhoneList(phonebook))
+    if (isSelected !== undefined)
+        section.append(createCardOfNumber(isSelected))
+    else section.append(createCardOfNull())
+}
+
+const removePhone = (item) => {
+    return phonebook.splice(phonebook.indexOf(item), 1)
+}
+
 const createElementOfList = (item) => {
     const li = document.createElement('li')
+    li.setAttribute('id', `item_${item.id}`)
     li.innerHTML = `<div><h1>${item.name}</h1><br><h3>${item.number}</h3></div><div><i class="fa fa-trash fa-2x" aria-hidden="true"></i></div>`
     li.classList.add('phone-box')
+    if (item.selected) li.classList.add('phone-active')
+    li.onclick = (event) => {
+        const id = +event.target.id.split('_')[1]
+        const obj = phonebook.find(el => el.id === id);
+        if (obj.selected === false) {
+            obj.selected = true
+            li.classList.add('phone-active')
+            let notSelectedArray = phonebook.filter(el => el.id !== obj.id);
+            notSelectedArray.forEach(el => el.selected = false);
+            let liArray = Array.from(document.querySelectorAll('.phone-box'))
+            liArray.filter(el => +el.id.split('_')[1] !== id).forEach(el => el.classList.remove('phone-active'))
+            createCardOfNumber(obj).innerHTML = ``
+            section.append(createCardOfNumber(obj))
+        } else {
+            obj.selected = false
+            li.classList.remove('phone-active')
+        }
+        // if (event.target.classList.contains('fa')) {
+        //     removePhone(obj)
+        //     document.querySelector('.phone-card').innerHTML = ``
+        //     renderSection()
+        // }
+
+    }
     return li
 }
 
 const createPhoneList = (array) => {
+    section.classList.add('section-list')
     const div = document.createElement('div');
     div.classList.add('phone-list');
     const ul = document.createElement('ul')
@@ -225,12 +283,45 @@ const createPhoneList = (array) => {
     return div;
 }
 
+const createCardOfNumber = (item) => {
+    section.innerHTML = ``;
+    section.append(createPhoneList(phonebook))
+    const div = document.createElement('div'),
+        h1 = document.createElement('h1'),
+        h3Number = document.createElement('h3'),
+        h3Email = document.createElement('h3'),
+        h3Location = document.createElement('h3'),
+        h4 = document.createElement('h4')
+
+    div.classList.add('phone-card')
+
+    h1.innerHTML = `${item.name}`
+    h3Number.innerHTML = `<i class="fa fa-phone fa-2x" aria-hidden="true"></i><span>${item.number}</span>`
+    h3Email.innerHTML = `<i class="fa fa-envelope fa-2x" aria-hidden="true"></i><span>${item.email}</span>`
+    h3Location.innerHTML = `<i class="fa fa-home fa-2x" aria-hidden="true"></i><span>${item.location}</span>`
+    h4.innerHTML = `${item.description}`
+
+    div.append(h1, h3Number, h3Email, h3Location, h4)
+    return div;
+}
+
+const createCardOfNull = () => {
+    const div = document.createElement('div'),
+        h2 = document.createElement('h2')
+    div.classList.add('phone-card')
+    h2.innerHTML = `No selected contact`
+
+    div.append(h2)
+    return div;
+}
+
+renderSection()
 
 btnHome.onclick = () => {
     section.innerHTML = ``
     btnHome.classList.add('active')
     btnAddPhone.classList.remove('active')
-    section.append(createPhoneList(phonebook))
+    renderSection()
 }
 
 btnAddPhone.onclick = () => {
