@@ -6,7 +6,7 @@
 
 .wrapper {
     width: 80%;
-    margin: 75px auto 0 auto;
+    margin: 25px auto 0 auto;
 }
 
 hr {
@@ -163,7 +163,7 @@ nav ul li a:hover {
     margin: 10px 0;
 }
 
-.phone-card h3 span{
+.phone-card h3 span {
     font-size: 2em;
     margin-left: 15px;
     font-weight: 200;
@@ -173,4 +173,68 @@ nav ul li a:hover {
     margin-top: 30px;
     font-size: 1.6em;
     font-weight: 200;
+}
+
+.search-field {
+    width: 100%;
+}
+
+.search-box {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.search-box input {
+    width: 500px;
+    padding: 5px 25px;
+    font-size: 1.5em;
+    font-weight: 200;
+    margin: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #0F7F12;
+}
+
+.search-field hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.search-field ol {
+    width: 70%;
+    margin: 15px auto;
+}
+
+.search-field ol li {
+    border-bottom: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.search-field ol li span {
+    grid-row: 1 / s;
+    align-self: center;
+    justify-self: center;
+    font-size: 2em;
+    border-bottom: 1px solid black;
+}
+
+.search-field ol li h1, .search-field ol li p {
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    padding: 5px 15px;
+}
+
+.search-field ol li p {
+    font-style: italic;
+}
+
+.search-field ol li p:last-child {
+    border: 0;
+}
+
+.search-field ol li h2 {
+    padding: 5px 15px;
+    text-transform: uppercase;
 }

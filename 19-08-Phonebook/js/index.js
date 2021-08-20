@@ -1,6 +1,7 @@
 //menu buttons
 const btnHome = document.querySelector('#btn-home'),
-    btnAddPhone = document.querySelector('#btn-add-phone')
+    btnAddPhone = document.querySelector('#btn-add-phone'),
+    btnSearchUsers = document.querySelector('#btn-search-users')
 
 //section
 const section = document.querySelector('section')
@@ -288,10 +289,138 @@ const createCardOfNull = () => {
 
 renderSection()
 
+//search section
+const users = [
+    {
+        id: 1,
+        userName: 'Vasya Petrov',
+        age: 32,
+        city: 'London',
+        profession: 'driver'
+    },
+    {
+        id: 2,
+        userName: 'Ivan Ivanov',
+        age: 25,
+        city: 'Moscow',
+        profession: 'seller'
+    },
+    {
+        id: 3,
+        userName: 'Dima Bilan',
+        age: 41,
+        city: 'Moscow',
+        profession: 'singer'
+    },
+    {
+        id: 4,
+        userName: 'Vlad Jama',
+        age: 36,
+        city: 'Kiev',
+        profession: 'dancer'
+    },
+    {
+        id: 5,
+        userName: 'Elena Sitar',
+        age: 21,
+        city: 'Berlin',
+        profession: 'teacher'
+    },
+    {
+        id: 6,
+        userName: 'Maksym Kostenko',
+        age: 26,
+        city: 'Mainz',
+        profession: 'student'
+    },
+    {
+        id: 7,
+        userName: 'Volodymyr Zelenskiy',
+        age: 35,
+        city: 'Kiev',
+        profession: 'president'
+    }
+]
+
+const setCounter = () => {
+    let counter = 1;
+    return function () {
+        return counter++
+    }
+}
+
+const getAge = (item) => {
+    const yearNow = new Date().getFullYear();
+    return yearNow - item
+}
+
+const createUser = (item, counter) => {
+    const li = document.createElement('li')
+    li.setAttribute('id', `item_${item.id}`)
+    li.innerHTML = `<span>${counter}</span><h1>${item.userName}</h1><h2>${item.profession}</h2><p>${item.city}</p><p>${getAge(item.age)}</p>`
+    return li
+}
+
+const createUsersList = (array) => {
+    const ol = document.createElement('ol')
+    const counter = setCounter();
+    array.forEach(item => ol.append(createUser(item, counter())))
+    return ol
+}
+
+const createSearchFiled = () => {
+    const div = document.createElement('div'),
+        input = document.createElement('input'),
+        label = document.createElement('label'),
+        button = document.createElement('button')
+
+    div.classList.add('search-box')
+    input.setAttribute('type', 'text')
+    input.setAttribute('placeholder', 'Type city')
+    input.setAttribute('id', 'input-search')
+    label.setAttribute('for', 'input-search')
+    button.setAttribute('id', 'btn-search')
+    button.innerHTML = `<i class="fa fa-search fa-lg" aria-hidden="true"></i>`
+    button.classList.add('btn')
+    button.onclick = findUser
+    div.append(input, button, label)
+    return div
+}
+
+const createSearchBox = () => {
+    const div = document.createElement('div')
+    div.classList.add('search-field')
+    div.append(createSearchFiled())
+    const hr = document.createElement('hr')
+    div.append(hr)
+    div.append(createUsersList(users))
+    return div
+}
+
+const renderSearchBox = () => {
+    section.innerHTML = ``
+    section.append(createSearchBox())
+}
+
+const findUser = () => {
+    const searchValue = document.querySelector('#input-search')
+    const searchField = document.querySelector('.search-field');
+    searchField.removeChild(searchField.children[searchField.children.length - 1])
+    if (searchValue.value === '')
+        searchField.append(createUsersList(users))
+    else {
+        const foundUsers = users.filter(item => item.city === searchValue.value)
+        console.log(foundUsers)
+        searchField.append(createUsersList(foundUsers))
+    }
+}
+
+
 btnHome.onclick = () => {
     section.innerHTML = ``
     btnHome.classList.add('active')
     btnAddPhone.classList.remove('active')
+    btnSearchUsers.classList.remove('active')
     renderSection()
 }
 
@@ -299,5 +428,14 @@ btnAddPhone.onclick = () => {
     section.innerHTML = ``
     btnHome.classList.remove('active')
     btnAddPhone.classList.add(`active`)
+    btnSearchUsers.classList.remove('active')
     addPhoneNumber(phonebook)
 }
+
+btnSearchUsers.onclick = () => {
+    btnHome.classList.remove('active')
+    btnAddPhone.classList.remove(`active`)
+    btnSearchUsers.classList.add('active')
+    renderSearchBox()
+}
+
