@@ -7,7 +7,23 @@ const btnHome = document.querySelector('#btn-home'),
 const section = document.querySelector('section')
 
 //database
-const phonebook = []
+const phonebook = [{
+    "id": 1,
+    "name": "Anna",
+    "number": "+12-456-789-00-01",
+    "email": "qwqqdqd@mail.comw",
+    "location": "City",
+    "description": "Wife",
+    "selected": false
+},{
+    "id": 2,
+    "name": "Max",
+    "number": "+12-456-789-00-00",
+    "email": "qwqqdqd@mail.com",
+    "location": "Mainz",
+    "description": "Hero",
+    "selected": false
+}]
 
 //add phone number section
 const filterArray = (array, elements) => {
@@ -219,7 +235,7 @@ const createElementOfList = (item) => {
     li.classList.add('phone-box')
     if (item.selected) li.classList.add('phone-active')
     li.addEventListener('click', function (event) {
-        const id = +event.target.id.split('_')[1]
+        const id = +event.currentTarget.id.split('_')[1]
         const obj = phonebook.find(el => el.id === id);
         if (obj.selected === false) {
             obj.selected = true

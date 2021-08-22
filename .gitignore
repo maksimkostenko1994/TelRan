@@ -43,3 +43,5 @@ target/
 
 #x-code
 *.xcodeproj
+
+/19-08-Phonebook/font-awesome-4.7.0
