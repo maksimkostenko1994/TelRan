@@ -1,7 +1,8 @@
 //menu buttons
 const btnHome = document.querySelector('#btn-home'),
     btnAddPhone = document.querySelector('#btn-add-phone'),
-    btnSearchUsers = document.querySelector('#btn-search-users')
+    btnSearchUsers = document.querySelector('#btn-search-users'),
+    btnSearch = document.querySelector('#search-btn')
 
 //section
 const section = document.querySelector('section')
@@ -253,7 +254,7 @@ const createElementOfList = (item) => {
             const id = +event.currentTarget.id.split('_')[1]
             const obj = phonebook.find(el => el.id === id);
             removePhone(obj)
-            document.querySelector('.phone-card').innerHTML = ``
+            //document.querySelector('.phone-card').innerHTML = ``
             renderSection()
         }
     })
@@ -430,6 +431,91 @@ const findUser = () => {
     }
 }
 
+//search section 2
+
+let searchItems;
+const findUsers = (value) => {
+    let res = [];
+    for(let item of phonebook)
+        if(Object.values(item).join('').toUpperCase().includes(value.toUpperCase()))
+            res.push(item)
+    return res
+}
+
+const renderSearchSection = () => {
+    section.innerHTML = ''
+    const isSelected = searchItems.find(item => item.selected === true);
+    section.append(createSearchPhoneList(searchItems))
+    if (isSelected !== undefined)
+        section.append(createSearchCardOfNumber(isSelected))
+    else section.append(createCardOfNull())
+}
+
+const createSearchElementOfList = (item) => {
+    const li = document.createElement('li')
+    li.setAttribute('id', `item_${item.id}`)
+    li.innerHTML = `<div><h1>${item.name}</h1><br><h3>${item.number}</h3></div><div><i class="fa fa-trash fa-2x" aria-hidden="true"></i></div>`
+    li.classList.add('phone-box')
+    if (item.selected) li.classList.add('phone-active')
+    li.addEventListener('click', function (event) {
+        const id = +event.currentTarget.id.split('_')[1]
+        const obj = searchItems.find(el => el.id === id);
+        if (obj.selected === false) {
+            obj.selected = true
+            li.classList.add('phone-active')
+            let notSelectedArray = searchItems.filter(el => el.id !== obj.id);
+            notSelectedArray.forEach(el => el.selected = false);
+            let liArray = Array.from(document.querySelectorAll('.phone-box'))
+            liArray.filter(el => +el.id.split('_')[1] !== id).forEach(el => el.classList.remove('phone-active'))
+            createSearchCardOfNumber(obj).innerHTML = ``
+            section.append(createSearchCardOfNumber(obj))
+        }
+    })
+    li.addEventListener('click', function (event) {
+        if (event.target.classList.contains('fa')) {
+            const id = +event.currentTarget.id.split('_')[1]
+            const obj = phonebook.find(el => el.id === id);
+            removePhone(obj)
+            //document.querySelector('.phone-card').innerHTML = ``
+            renderSearchSection()
+        }
+    })
+    return li
+}
+
+const createSearchPhoneList = (array) => {
+    section.classList.add('section-list')
+    const div = document.createElement('div');
+    div.classList.add('phone-list');
+    const ul = document.createElement('ul')
+    for (let item of array)
+        ul.append(createSearchElementOfList(item))
+    div.append(ul)
+    return div;
+}
+
+const createSearchCardOfNumber = (item) => {
+    section.innerHTML = ``;
+    section.append(createSearchPhoneList(searchItems))
+    const div = document.createElement('div'),
+        h1 = document.createElement('h1'),
+        h3Number = document.createElement('h3'),
+        h3Email = document.createElement('h3'),
+        h3Location = document.createElement('h3'),
+        h4 = document.createElement('h4')
+
+    div.classList.add('phone-card')
+
+    h1.innerHTML = `${item.name}`
+    h3Number.innerHTML = `<i class="fa fa-phone fa-2x" aria-hidden="true"></i><span>${item.number}</span>`
+    h3Email.innerHTML = `<i class="fa fa-envelope fa-2x" aria-hidden="true"></i><span>${item.email}</span>`
+    h3Location.innerHTML = `<i class="fa fa-home fa-2x" aria-hidden="true"></i><span>${item.location}</span>`
+    h4.innerHTML = `${item.description}`
+
+    div.append(h1, h3Number, h3Email, h3Location, h4)
+    return div;
+}
+
 
 btnHome.onclick = () => {
     section.innerHTML = ``
@@ -452,5 +538,24 @@ btnSearchUsers.onclick = () => {
     btnAddPhone.classList.remove(`active`)
     btnSearchUsers.classList.add('active')
     renderSearchBox()
+}
+
+btnSearch.onclick = () => {
+    section.innerHTML = ``
+    btnHome.classList.add('active')
+    btnAddPhone.classList.remove('active')
+    btnSearchUsers.classList.remove('active')
+    searchItems = findUsers(input.value)
+    renderSearchSection(searchItems)
+}
+
+const input = document.querySelector('#menu-search-input')
+input.oninput = () => {
+    section.innerHTML = ``
+    btnHome.classList.add('active')
+    btnAddPhone.classList.remove('active')
+    btnSearchUsers.classList.remove('active')
+    searchItems = findUsers(input.value)
+    renderSearchSection(searchItems)
 }
 
