@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right, .left {
+    margin-top: 20px;
+    padding: 10px;
+    width: 45%;
+    background-color: #f5eeee;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.users-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.users-list h3 {
+    cursor: pointer;
+    color: #706868;
+    transition: all 0.5s ease
+}
+
+hr {
+    border: none;
+    background-color: black;
+    height: 0.5px;
+}
+
+.users-list h3:hover {
+    color: #333333;
+    transform: scale(1.05);
+}
+
+.left div {
+    border: 1px solid #32bad3;
+    background-color: lightblue;
+    margin-top: 5px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.left div:hover {
+    background-color: #fff;
+    color: black;
+    transform: scale(1.05);
+}
+
+.right div div:not(.comment) {
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border-radius: 5px;
+}
+
+.comment {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    _grid-template-rows: 1fr;
+}
+
+.comment input {
+
+}
+
+.comment button {
+
+}
+
+.comment textarea {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 75px;
+    resize: none;
+}
