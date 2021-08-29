@@ -1,0 +1,120 @@
+section {
+  height: 100%;
+  display: flex;
+}
+
+.login-box {
+  border: 1px solid black;
+  margin: 40px auto;
+  width: 600px;
+  background-color: #fde0e0;
+  border-radius: 10px;
+  align-self: center;
+
+  h1 {
+    text-align: center;
+    color: #8d2020;
+    margin: 20px 0;
+    font-size: 2em;
+  }
+
+  .form-box {
+    display: flex;
+    border-radius: 5px 0 0 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    position: relative;
+
+    .pass-look {
+      cursor: pointer;
+      position: absolute;
+      right: 50px;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      color: #8d2020;
+    }
+
+    div {
+      background-color: #fff;
+      height: 50px;
+      width: 50px;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid #8d2020;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:first-child {
+        color: #8d2020;
+      }
+    }
+  }
+
+  input {
+    width: 450px;
+    padding-left: 10px;
+    height: 50px;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    border-top: 1px solid #8d2020;
+    border-right: 1px solid #8d2020;
+    border-bottom: 1px solid #8d2020;
+    font-size: 1em;
+    color: #e87e7e;
+    transition: all 0.5s ease;
+
+    &:focus {
+      box-shadow: 0 0 10px #8d2020;
+    }
+  }
+
+  .form-account {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+
+    span {
+      color: #a83838;
+
+      a {
+        color: #8d2020;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    button {
+      display: block;
+      margin: 20px 0;
+      padding: 7px 40px;
+      border: 1px solid #e87e7e;
+      background-color: #8d2020;
+      color: #e87e7e;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.6em;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e87e7e;
+        color: #8d2020;
+        border-color: #8d2020;
+      }
+    }
+  }
+
+}
+
+.placeholder-color::placeholder {
+  color: red;
+  font-weight: 700;
+}

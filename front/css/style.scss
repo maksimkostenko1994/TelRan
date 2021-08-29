@@ -1,0 +1,93 @@
+$main_color: #e87e7e;
+$main_color_hover: #8d2020;
+
+@import "./modules/login.scss";
+@import "./modules/userPage.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+section {
+  background: linear-gradient($main_color, $main_color_hover);
+}
+
+.nav-menu {
+  background-color: $main_color;
+  height: 50px;
+
+  ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    li {
+      list-style-type: none;
+
+      &:first-child {
+        margin-right: auto;
+
+        img {
+          position: absolute;
+          z-index: 2;
+          left: 30px;
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  line-height: 50px;
+  background-color: $main_color;
+  color: $main_color_hover;
+  cursor: pointer;
+  border: none;
+  padding: 0 30px;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: snow;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+footer {
+  background-color: $main_color_hover;
+  color: $main_color;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+  margin-top: auto;
+  user-select: none;
+
+  h1 {
+    animation: transformFooter 10s infinite ease;
+  }
+}
+
+@keyframes transformFooter {
+  0%, 10% {
+    transform: scale(1);
+  }
+
+  5% {
+    transform: scale(1.4);
+  }
+}
