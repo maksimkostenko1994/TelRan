@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list-box {
+    margin: 50px auto;
+    border: 1px solid aquamarine;
+    width: 500px;
+}
+
+ul {
+    padding: 5px 10px;
+}
+
+ul li{
+    list-style-type: none;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+
+span {
+    color: red;
+}
