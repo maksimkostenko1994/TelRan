@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    grid-gap: 5px;
+    margin: 50px auto;
+}
+
+#app ul li {
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#app ul li:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+#app .todo-box {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#app .todo-box h1 {
+    text-align: center;
+}
+
+#app .todo-box ul {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#app .todo-box ul li {
+    display: flex;
+    border: none !important;
+    font-size: 1.6em;
+    align-items: center;
+}
+
+#app .todo-box ul li input {
+    width: 35px;
+    height: 35px;
+}
+
+#app .todo-box ul li h4 {
+    margin-left: 10px;
+}
