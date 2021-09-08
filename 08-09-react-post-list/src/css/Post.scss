@@ -1,0 +1,26 @@
+.post {
+  list-style-type: none;
+  border-bottom: 1px solid grey;
+  width: 350px;
+  padding: 10px;
+  text-align: left;
+
+  h1:first-letter, p:first-letter {
+    text-transform: uppercase;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: #4055ec;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.6em;
+    color: white;
+
+    &:last-child {
+      margin-left: 10px;
+      background-color: #f34141;
+    }
+  }
+}
