@@ -1,14 +1,6 @@
 import "../../css/BookCard.css"
 
-import {useState} from 'react'
-
-const BookCard = ({title, author, yearIssue, genre, cover}) => {
-
-    const [count, setCount] = useState(0)
-
-    const addBook = () => count < 10 ? setCount(count + 1) : setCount(10)
-
-    const delBook = () => count > 0 ? setCount(count - 1) : setCount(0)
+const BookCard = ({title, id, author, yearIssue, genre, cover, price, quantity, addBook}) => {
 
     return (
         <>
@@ -17,10 +9,11 @@ const BookCard = ({title, author, yearIssue, genre, cover}) => {
             <h4>{yearIssue}</h4>
             <h3>{genre}</h3>
             <img src={cover} alt={title}/>
+            <h5>Price: {price}</h5>
             <div className="count">
-                <button onClick={addBook}>+</button>
-                <h1>{count}</h1>
-                <button onClick={delBook}>-</button>
+                <button onClick={() => addBook(id)}>+</button>
+                <h1>{quantity}</h1>
+                <button>-</button>
             </div>
         </>
     )
