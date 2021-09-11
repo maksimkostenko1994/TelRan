@@ -1,3 +1,5 @@
+import "../../css/posts/comments/Comment.scss"
+
 const Comment = ({comment: {author, text}}) => {
     return (
         <div className="comment">

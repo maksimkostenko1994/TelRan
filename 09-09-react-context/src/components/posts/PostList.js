@@ -1,10 +1,9 @@
-import Store from '../../store/Store'
 import Post from './Post'
-//import {useState} from "react"
 
-const PostList = () => {
-    //const [posts, setPosts] = useState(Store())
-    const posts = Store()
+import "../../css/posts/PostList.scss"
+
+
+const PostList = ({posts}) => {
 
     return(
         <div className="post-list">
