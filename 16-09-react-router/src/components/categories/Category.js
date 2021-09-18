@@ -1,6 +1,6 @@
 import "../../sass/Category.scss"
 
-import {MealsContext} from "../../App"
+import {MealsContext} from "../meals/MealsNav"
 
 import {useContext} from "react"
 

@@ -1,28 +1,22 @@
-import CategoryList from "./components/categories/CategoryList"
-import MealList from "./components/meals/MealList"
-import React, {useState} from 'react'
+import Navigation from "./components/navigation/Navigation"
+
+import {Switch, Route} from "react-router-dom"
+
+import MealsNav from "./components/meals/MealsNav"
 
 import "./App.scss"
 
-export const MealsContext = React.createContext()
 
 function App() {
 
-    const [currentCategory, setCategory] = useState(null)
-
-    const changeCategory = (category) => {
-        setCategory(category)
-    }
-
-
     return (
         <div className="app">
-            <MealsContext.Provider value={{
-                changeCategory: changeCategory
-            }}>
-                <CategoryList/>
-            </MealsContext.Provider>
-            {currentCategory ? <MealList/> : <h1>No meals today:)</h1>}
+            <Navigation/>
+            <Switch>
+                <Route exact path="/" render={() => <h1>Home</h1>}/>
+                <Route path="/meals" component={MealsNav}/>
+                <Route path="/posts" render={() => <h1>Home</h1>}/>
+            </Switch>
         </div>
     );
 }

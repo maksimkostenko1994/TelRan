@@ -1,0 +1,7 @@
+.meals-list {
+
+  &:not(h1){
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

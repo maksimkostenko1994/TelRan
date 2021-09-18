@@ -24,12 +24,16 @@ const CategoryList = () => {
                 setLoading(false)
                 setError(error.message)
             })
-    })
+    }, [])
+
+    const renderCategories = () => {
+        return loading ? <h1>Loading...</h1> : categories.map(category => <Category key={category.idCategory}
+                                                                                    category={category}/>)
+    }
 
     return (
         <ul className="category-list">
-            {loading ? categories.map(category => <Category key={category.idCategory} category={category}/>) :
-                <h1>Loading...</h1>}
+            {renderCategories()}
         </ul>
     )
 }
