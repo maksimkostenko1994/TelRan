@@ -16,7 +16,6 @@ const MealList = ({category}) => {
         setError(null)
         Store.getMealsByCategory(category)
             .then(data => {
-                console.log(data)
                 setLoading(false)
                 setMeals(data.meals)
             })

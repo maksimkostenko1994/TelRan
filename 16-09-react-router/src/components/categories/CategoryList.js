@@ -16,7 +16,6 @@ const CategoryList = () => {
         setError(null)
         Store.getAllCategories()
             .then(data => {
-                console.log(data)
                 setLoading(false)
                 setCategories(data.categories)
             })
