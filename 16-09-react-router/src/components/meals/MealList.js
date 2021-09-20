@@ -23,13 +23,14 @@ const MealList = ({category}) => {
     }, [category])
 
     return (
-        <>
-            <h1>{category}</h1>
-            <ul className="meals-list">
-                {loading ? <h1>Chefs didn't prepare any food:( Sorry...</h1> : meals.map(meal => <Meal key={meal.idMeal}
-                                                                                                       meal={meal}/>)}
-            </ul>
-        </>
+            <div className="meals-box">
+                <h1>{category}</h1>
+                <ul className="meals-list">
+                    {loading ? <h1>Chefs didn't prepare any food:( Sorry...</h1> : meals.map(meal => <Meal
+                        key={meal.idMeal}
+                        meal={meal}/>)}
+                </ul>
+            </div>
     )
 }
 

@@ -13,14 +13,23 @@ const MealsNav = () => {
         setCategory(category)
     }
 
+    const searchCategory = (value, categories) => {
+        const data = categories.find(item => item.strCategory === value)
+        if (data !== undefined) {
+            setCategory(data.strCategory)
+        }
+        else setCategory(null)
+    }
+
     return (
         <>
             <MealsContext.Provider value={{
-                changeCategory: changeCategory
+                changeCategory: changeCategory,
+                searchCategory: searchCategory
             }}>
                 <CategoryList/>
+                {currentCategory ? <MealList category={currentCategory}/> : <h1>No meals today:)</h1>}
             </MealsContext.Provider>
-            {currentCategory ? <MealList category={currentCategory}/> : <h1>No meals today:)</h1>}
         </>
     )
 }
