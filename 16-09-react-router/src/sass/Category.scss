@@ -1,0 +1,24 @@
+.category-item {
+  margin: 5px 10px;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #f3f0f0;
+  transition: all 0.5s ease;
+
+  img {
+    width: 200px;
+  }
+
+  &:hover {
+    border-color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+}
