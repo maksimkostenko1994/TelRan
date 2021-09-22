@@ -15,7 +15,6 @@ const UserProfile = () => {
     const submitHandler = (event) => {
         event.preventDefault()
         if (!user.fName.trim() || !user.lName.trim() || !user.email.trim() || !user.password.trim()) return
-        console.log(user)
     }
 
     return (
