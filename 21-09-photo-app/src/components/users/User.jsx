@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 import {getCurrentUser} from "../../store/usersData";
 
 const User = ({user}) => {
@@ -14,7 +16,9 @@ const User = ({user}) => {
             <div className="card-body">
                 <h5 className="card-title">{user.fName} {user.lName}</h5>
                 <p className="card-text">{user.email}</p>
-                {authUser === user.id ? <button className="btn btn-dark w-100">Profile</button> : null}
+                {authUser === user.id ?
+                    <Link className="btn btn-dark w-100" to={`/user/${user.id}`}>Profile</Link> :
+                    <Link className="btn btn-dark w-100" to={`/albums/user/${user.id}`}>View albums</Link>}
             </div>
         </div>
     )

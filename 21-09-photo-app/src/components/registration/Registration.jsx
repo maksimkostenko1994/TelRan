@@ -1,6 +1,7 @@
 import {useContext, useState} from "react";
 import {AppContext} from "../../App";
 import {useHistory} from "react-router-dom";
+import Error from "../errors/Error"
 
 const Registration = () => {
 
@@ -16,11 +17,17 @@ const Registration = () => {
         avatar: ''
     })
 
+    const [error, setError] = useState(null)
+
     const submitHandler = event => {
         event.preventDefault()
-        if(!formData.fName.trim() || !formData.lName.trim() || !formData.email.trim() || !formData.password.trim()) return
-        addUser(formData)
-        history.push("/users")
+        if (!formData.fName.trim() || !formData.lName.trim() || !formData.email.trim() || !formData.password.trim()) return
+        if (addUser(formData))
+            history.push("/users")
+        else {
+            setError('user specified email is already exist')
+            setFromData({...formData, email: ''})
+        }
     }
 
 
@@ -30,6 +37,7 @@ const Registration = () => {
 
     return (
         <div className="container">
+            {error && <Error message={error}/>}
             <div className="w-50 mx-auto">
                 <form onSubmit={submitHandler}>
                     <div className="form-group">

@@ -1,6 +1,7 @@
-const users = JSON.parse(localStorage.getItem('users')) || []
 
-export default users
+export const getUsers = () => {
+    return JSON.parse(localStorage.getItem('users')) || []
+}
 
 export const setUsersToLocalStorage = users => localStorage.setItem('users', JSON.stringify(users))
 
@@ -11,6 +12,6 @@ export const getCurrentUser = () => JSON.parse(localStorage.getItem("currentUser
 export const logout = () => localStorage.removeItem('currentUserId')
 
 export const login = (currentUser) => {
-    const user = users.find(item => item.email === currentUser.email)
-    return user.password === currentUser.password ? user.id : null
+    const user = getUsers().find(item => item.email === currentUser.email)
+    return user ? (user.password === currentUser.password ? user.id : null) : null
 }
