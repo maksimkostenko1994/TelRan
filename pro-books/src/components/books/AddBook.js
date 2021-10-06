@@ -5,9 +5,9 @@ import {connect} from "react-redux";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {auth} from "../../config/fbConfig";
 import {addBook} from "../../store/books/bookActionCreater";
+import {BOOKS_ROUTE} from "../utils/consts";
 
-const AddBook = ({bookAdd}) => {
-
+const AddBook = ({bookAdd, history}) => {
     const [user] = useAuthState(auth)
 
     const [data, setData] = useState({
@@ -34,10 +34,9 @@ const AddBook = ({bookAdd}) => {
                 <TextField name={'image'} onChange={onChangeHandler} placeholder={'Type image...'}/>
                 <TextField name={'description'} onChange={onChangeHandler} placeholder={'Type description...'}/>
                 <TextField name={'pageQuantity'} type={'number'} onChange={onChangeHandler} placeholder={'Type page quantity...'}/>
-                <TextField name={'rate'} type={'number'} onChange={onChangeHandler} placeholder={'Type rate...'} />
                 <Button variant={'contained'} onClick={() => {
                     bookAdd({
-                        ...data, userId: user.uid, id: Date.now()
+                        ...data, rate: 0, userId: user.uid, id: Date.now()
                     })
                     setData({
                         image: '',
@@ -47,6 +46,7 @@ const AddBook = ({bookAdd}) => {
                         title: '',
                         author: ''
                     })
+                    history.push(BOOKS_ROUTE)
                 }}>Add</Button>
             </Box>
         </>

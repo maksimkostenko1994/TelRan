@@ -23,13 +23,30 @@ export const addBook = (book) => {
     }
 }
 
-export const removeBook = id => {
+export const addCommentToBook = comment => {
+    return async dispatch => {
+        dispatch({type: rootActionTypes.loading})
+        try {
+            await firestore.collection('comments').add(comment)
+            dispatch({
+                type: bookActionTypes.add,
+                payload: comment
+            })
+        } catch (error) {
+            dispatch({
+                type: errorActionTypes.add_book,
+                payload: {
+                    error: error.message
+                }
+            })
+        }
+    }
+}
+
+export const removeBook = path => {
     return async dispatch => {
         try {
-            const books = await firestore.collection('books')
-            const newBooks = books.filter(item => item.id !== id)
-            console.log(newBooks)
-            dispatch({type: bookActionTypes.remove, payload: newBooks})
+            dispatch({type: bookActionTypes.remove, payload: []})
         } catch (error) {
             dispatch({
                 type: errorActionTypes.del_book,

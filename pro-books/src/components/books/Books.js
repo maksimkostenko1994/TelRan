@@ -21,7 +21,7 @@ const Books = () => {
     return (
         <Box display={"flex"}>
             {
-                books.map(book => <BookCard key={book.id} id={book.id} title={book.title} author={book.author}
+                books.map((book,index) => <BookCard key={book.id} rate={book.rate} index={index} id={book.id} title={book.title} author={book.author}
                                             image={book.image}/>)
             }
             {user ?
