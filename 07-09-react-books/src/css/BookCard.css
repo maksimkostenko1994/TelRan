@@ -1,0 +1,15 @@
+.book-card {
+    width: 46%;
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count button {
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.book-list {
+    text-align: left;
+    width: 46%;
+}
+
+.book-list li {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+.book-list li:hover {
+    background-color: rgba(0,0,0,0.1);
+}

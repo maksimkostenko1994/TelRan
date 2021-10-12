@@ -1,0 +1,18 @@
+.App {
+    text-align: center;
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    height: 60px;
+    background-color: #030303;
+}
+
+.app-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
