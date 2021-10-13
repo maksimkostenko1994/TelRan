@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0362f578-91e1-4f42-85e5-3b46a7511d76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Sass File" />
+        <option value="SCSS File" />
+        <option value="package.json" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="08-09-ReactPostList" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/todo_store/todoReducer/TodoReducer.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/config/fbconfig.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/todo_store/appReducer/AppReducer.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/services/authService.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/todo_store/authReducer.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/TodoList.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/todo_store/store.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Authenticate.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Header.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1wrJlYHUrLWBBmMgELjGSMsNtTD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.14.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="15.14.0" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\koste\WebstormProjects\TelRan" />
+      <recent name="C:\Users\koste\WebstormProjects\TelRan\16-09-react-router" />
+      <recent name="C:\Users\koste\WebstormProjects\TelRan\19-08-Phonebook" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\koste\WebstormProjects\TelRan\21-09-photo-app\src" />
+      <recent name="C:\Users\koste\WebstormProjects\TelRan\" />
+      <recent name="C:\Users\koste\WebstormProjects\TelRan\09-09-react-context\src\css" />
+      <recent name="C:\Users\koste\WebstormProjects\TelRan\09-09-react-context\src\components" />
+      <recent name="C:\Users\koste\WebstormProjects\TelRan\08-09-react-post-list\src\components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="node_path" type="NodeJSConfigurationType" working-dir="$PROJECT_DIR$/">
+      <envs>
+        <env name="NODE_PATH" value="C:\Users\koste\WebstormProjects\TelRan\21-09-photo-app\node_modules\" />
+      </envs>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0362f578-91e1-4f42-85e5-3b46a7511d76" name="Default Changelist" comment="" />
+      <created>1629210929288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629210929288</updated>
+      <workItem from="1629210934391" duration="1539000" />
+      <workItem from="1629212515366" duration="1729000" />
+      <workItem from="1629234193680" duration="3795000" />
+      <workItem from="1629271815310" duration="125000" />
+      <workItem from="1629288884447" duration="2781000" />
+      <workItem from="1629303824713" duration="14871000" />
+      <workItem from="1629358517966" duration="1780000" />
+      <workItem from="1629362474314" duration="4088000" />
+      <workItem from="1629384340506" duration="65000" />
+      <workItem from="1629386347932" duration="23000" />
+      <workItem from="1629386383888" duration="31000" />
+      <workItem from="1629388365980" duration="20291000" />
+      <workItem from="1629452407809" duration="1286000" />
+      <workItem from="1629454730436" duration="6360000" />
+      <workItem from="1629477318602" duration="9042000" />
+      <workItem from="1629492398571" duration="134000" />
+      <workItem from="1629534322895" duration="32000" />
+      <workItem from="1629535955682" duration="1740000" />
+      <workItem from="1629538825777" duration="2131000" />
+      <workItem from="1629632243210" duration="1411000" />
+      <workItem from="1629663127799" duration="242000" />
+      <workItem from="1629703556608" duration="812000" />
+      <workItem from="1629713867389" duration="16000" />
+      <workItem from="1629724476637" duration="8348000" />
+      <workItem from="1629740477871" duration="187000" />
+      <workItem from="1629744709925" duration="59000" />
+      <workItem from="1629744850739" duration="18000" />
+      <workItem from="1629745164071" duration="390000" />
+      <workItem from="1629789518990" duration="747000" />
+      <workItem from="1629816994544" duration="717000" />
+      <workItem from="1629832830625" duration="208000" />
+      <workItem from="1629876167652" duration="313000" />
+      <workItem from="1630144171690" duration="713000" />
+      <workItem from="1630249644520" duration="343000" />
+      <workItem from="1630308577098" duration="2519000" />
+      <workItem from="1630343765507" duration="374000" />
+      <workItem from="1630344170787" duration="66000" />
+      <workItem from="1630344246400" duration="3102000" />
+      <workItem from="1630347408534" duration="97000" />
+      <workItem from="1630395116629" duration="851000" />
+      <workItem from="1630427891214" duration="747000" />
+      <workItem from="1630428662815" duration="5615000" />
+      <workItem from="1630481576091" duration="219000" />
+      <workItem from="1630513354971" duration="468000" />
+      <workItem from="1630514126495" duration="1108000" />
+      <workItem from="1630751449102" duration="93000" />
+      <workItem from="1630753271630" duration="206000" />
+      <workItem from="1630754255497" duration="391000" />
+      <workItem from="1630937370058" duration="15000" />
+      <workItem from="1630937465386" duration="640000" />
+      <workItem from="1630938123989" duration="1320000" />
+      <workItem from="1630940273731" duration="8000" />
+      <workItem from="1631032978067" duration="9716000" />
+      <workItem from="1631086388629" duration="84000" />
+      <workItem from="1631095419573" duration="5890000" />
+      <workItem from="1631118707248" duration="7388000" />
+      <workItem from="1631126667113" duration="10000" />
+      <workItem from="1631126714392" duration="173000" />
+      <workItem from="1631169826160" duration="66000" />
+      <workItem from="1631172788181" duration="2483000" />
+      <workItem from="1631200129000" duration="303000" />
+      <workItem from="1631200546986" duration="1758000" />
+      <workItem from="1631266203725" duration="6000" />
+      <workItem from="1631347068835" duration="13000" />
+      <workItem from="1631361243867" duration="13404000" />
+      <workItem from="1631558740025" duration="366000" />
+      <workItem from="1631559135065" duration="618000" />
+      <workItem from="1631560394076" duration="29000" />
+      <workItem from="1631968668928" duration="13244000" />
+      <workItem from="1631983476107" duration="146000" />
+      <workItem from="1631983636898" duration="5217000" />
+      <workItem from="1632153196683" duration="4548000" />
+      <workItem from="1632211517012" duration="22000" />
+      <workItem from="1632226616630" duration="826000" />
+      <workItem from="1632240646258" duration="351000" />
+      <workItem from="1632246743372" duration="1274000" />
+      <workItem from="1632295141007" duration="3353000" />
+      <workItem from="1632298674784" duration="12305000" />
+      <workItem from="1632325699727" duration="6549000" />
+      <workItem from="1632382443746" duration="3381000" />
+      <workItem from="1632394715737" duration="1864000" />
+      <workItem from="1632405056743" duration="501000" />
+      <workItem from="1632406271839" duration="155000" />
+      <workItem from="1632752696534" duration="9924000" />
+      <workItem from="1632814182934" duration="122000" />
+      <workItem from="1633199330860" duration="1949000" />
+      <workItem from="1633293928674" duration="111000" />
+      <workItem from="1633502956311" duration="574000" />
+      <workItem from="1633591559098" duration="2918000" />
+      <workItem from="1634022807348" duration="18527000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

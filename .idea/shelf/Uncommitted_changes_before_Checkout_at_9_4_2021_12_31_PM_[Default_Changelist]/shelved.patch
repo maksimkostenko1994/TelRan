@@ -1,0 +1,13 @@
+Index: package-lock.json
+===================================================================
+diff --git a/package-lock.json b/package-lock.json
+--- a/package-lock.json	
++++ b/package-lock.json	
+@@ -5,6 +5,7 @@
+   "requires": true,
+   "packages": {
+     "": {
++      "name": "WorkingEnvironment",
+       "version": "1.0.0",
+       "license": "ISC",
+       "dependencies": {

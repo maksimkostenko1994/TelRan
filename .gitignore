@@ -1,45 +1,23 @@
-### JetBrains template
-##  git config --global core.excludesfile .gitignore
-###
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# read 
-/src/main/resources/application.yml
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-*.iml
-*.json
+# testing
+/coverage
 
-.idea/*
-.idea/
-out/
-debug/
+# production
+/build
 
-## Plugin-specific files:
-
-# IntelliJ
-/out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-*.class
-*.jar
-*.war
-*.ear
-*.tmp
-*.exe
-
-thumbs.db
+# misc
 .DS_Store
-*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-test/
-target/generated-sources/
-target/
-/.classpath
-/.project
-.settings/
-
-
-#x-code
-*.xcodeproj
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
