@@ -2,6 +2,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 import {startLoading, stopLoading} from '../appReducer/AppReducer'
 
+import {addTodoItem, getAllTodos} from "../../services/todoService"
+
 const initialState = {
     todos: []
 }
@@ -10,6 +12,10 @@ const todoReducer = createSlice({
     name: 'todo',
     initialState,
     reducers: {
+        setTodo: (state, {payload}) => {
+            state.todos = payload
+        },
+
         addTodo: (state, {payload}) => {
             state.todos.push(
                 {
@@ -18,6 +24,7 @@ const todoReducer = createSlice({
                 }
             )
         },
+
         changeStatus: (state, {payload}) => {
             state.todos[payload.index].status = payload.status
         },
@@ -29,13 +36,30 @@ const todoReducer = createSlice({
 
 export default todoReducer.reducer
 
-export const {addTodo, changeStatus, removeTodo} = todoReducer.actions
+export const {addTodo, changeStatus, removeTodo, setTodo} = todoReducer.actions
 export const todoSelector = state => state.todo.todos
 
-export const addTodoAction = text => dispatch => {
+export const addTodoAction = (title, uid) => async dispatch => {
     dispatch(startLoading())
-    setTimeout(() => {
-        dispatch(addTodo({title: text}))
+    try {
+        const response = addTodoItem(title, uid)
+        console.log(response)
+        dispatch(addTodo({title}))
+    } catch (e) {
+        console.log(e.message)
+    } finally {
         dispatch(stopLoading())
-    }, 2000)
+    }
+}
+
+export const getAllTodoAction = (uid) => async dispatch => {
+    dispatch(startLoading())
+    try {
+        const response = await getAllTodos(uid)
+        dispatch(setTodo({todos: response.todos}))
+    } catch (e) {
+        console.log(e.message)
+    } finally {
+        dispatch(stopLoading())
+    }
 }

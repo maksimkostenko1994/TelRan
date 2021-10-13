@@ -10,12 +10,17 @@ import {appSelector} from "./todo_store/appReducer/AppReducer"
 function App() {
 
     const isLoading = useSelector(appSelector).isLoading
+
+    const user = localStorage.getItem('user_id')
     return (
         <div className="App">
-            <Authenticate/>
-            <Header/>
-            <hr/>
-            <TodoList/>
+            {!user ?
+                <Authenticate/>
+                : <>
+                    <Header/>
+                    <hr/>
+                    <TodoList/>
+                </>}
             {isLoading && <Loader/>}
         </div>
     );
