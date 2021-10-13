@@ -5,8 +5,26 @@ import Loader from "../Loader";
 import {Box, Button, Card, CardContent, CardMedia, TextField, Typography} from "@material-ui/core";
 import {connect} from "react-redux";
 import {addCommentToBook} from "../../store/books/bookActionCreater";
-import Comment from "../Comment";
+//import Comment from "../Comment";
 import {useAuthState} from "react-firebase-hooks/auth";
+
+const Comment = ({comment}) => {
+    console.log(comment)
+    return (
+        <Box sx={{
+            margin: '20px 0'
+        }}>
+            <h1>{comment.author}</h1>
+            <p>{comment.text}</p>
+            <hr style={{
+                backgroundColor: "lightgray",
+                border: 'none',
+                height: '1px',
+                marginTop: '5px'
+            }}/>
+        </Box>
+    );
+};
 
 const BookInfo = ({match, addComment}) => {
     const id = +match.params.id
