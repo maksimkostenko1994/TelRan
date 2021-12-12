@@ -7,7 +7,6 @@
 /src/main/resources/application.yml
 
 *.iml
-*.json
 
 .idea/*
 .idea/
@@ -21,6 +20,7 @@ debug/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+node_modules/
 
 *.class
 *.jar
